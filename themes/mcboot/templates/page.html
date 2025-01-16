@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Martin Charlier</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/styles.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Responsive navbar-->
+<!--     <nav class="navbar">
+        <div class="container">
+            <div class="title_background"></div>
+            <a class="navbar-brand" href="#">{{ SITENAME }}</a>
+            <hr>
+        </div>
+    </nav> -->
+    <div class="container-fluid mc-cover">
+        <div class="row justify-content-md-center">
+            <div class="container maxwidth">
+                <div class="row g-0">
+                    <div class="col-md-6 col-xs-6">
+                        <div class="mc-cover mc-flex-middle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Page content-->
+    {% if page.metadata.block %}
+        {% include page.metadata.block+'.html' %}
+    {% else %}
+        <div class="container-fluid mc-container">
+        <div class="row justify-content-md-center">
+            <div class="container maxwidth">
+                <div class="yellowtag"></div>
+                <div class="row g-0 mc-row">
+                    <div class="col-md-6 col-xs-6">
+            {{page.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/scripts.js"></script>
+    </body>
+</html>
