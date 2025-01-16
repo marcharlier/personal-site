@@ -70,3 +70,8 @@ publish:
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish 
+
+# Target to build the site
+build:
+	pelican content
+	@echo "Site built. Open http://localhost/~martincharlier/personal-site/output in your browser."
